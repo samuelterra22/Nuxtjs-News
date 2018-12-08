@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-center md:justify-between flex-wrap bg-teal px-6 py-1">
+  <nav class="z-50 fixed pin-t pin-x flex items-center justify-center md:justify-between flex-wrap bg-teal px-6 py-1">
     <div class="flex items-center flex-no-shrink text-white mr-6">
       <svg
         class="fill-current h-8 w-8 mr-2"
