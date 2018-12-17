@@ -3,6 +3,8 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  srcDir: __dirname,
+
   /*
   ** Headers of the page
   */
@@ -28,6 +30,13 @@ module.exports = {
   loading: { color: '#fff' },
 
   /*
+   ** Router config
+   */
+  router: {
+    middleware: []
+  },
+
+  /*
   ** Global CSS
   */
   css: ['~/assets/css/tailwind.css'],
@@ -42,7 +51,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/router'
   ],
   /*
   ** Axios module configuration
@@ -55,6 +65,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     /*
     ** You can extend webpack config here
     */
