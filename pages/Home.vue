@@ -21,7 +21,6 @@
     <v-article />
 
     <newsletter />
-
   </main>
 </template>
 
