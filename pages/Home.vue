@@ -7,11 +7,16 @@
     />
 
     <v-content>
-      <card
-        v-for="article in articles"
-        :key="article.title"
-        :article="article"
-      />
+      <v-loading
+        :is-loading="loading"
+        class="container max-w-xl m-auto flex flex-wrap items-center justify-start"
+      >
+        <card
+          v-for="article in articles"
+          :key="article.title"
+          :article="article"
+        />
+      </v-loading>
     </v-content>
 
     <newsletter />
@@ -24,15 +29,19 @@ import Card from '../components/Card'
 import VContent from '../components/VContent'
 import Newsletter from '../components/Newsletter'
 import NewsAPI from 'newsapi'
+import VLoading from '../components/VLoading'
 
 export default {
   components: {
+    VLoading,
     Newsletter,
     VContent,
     Card,
     Tab
   },
   data: () => ({
+    loading: true,
+    newsapi: null,
     articles: [],
     navItemSelected: 'business',
     navItems: [
@@ -62,26 +71,32 @@ export default {
       }
     ]
   }),
-  async asyncData() {
-    const newsapi = new NewsAPI(process.env.API_KEY)
-
-    const articles = await newsapi.v2
-      .topHeadlines({
-        country: 'br',
-        category: 'technology',
-        sortBy: 'relevancy'
-      })
-      .then(({ articles }) => {
-        return articles
-      })
-      .catch(e => {
-        console.log(e)
-      })
-    return { articles }
+  created() {
+    this.newsapi = new NewsAPI(process.env.API_KEY)
+  },
+  async mounted() {
+    await this.getArticles()
   },
   methods: {
-    onTabSelected(item) {
+    async onTabSelected(item) {
       this.navItemSelected = item.key
+      await this.getArticles()
+    },
+    async getArticles() {
+      this.loading = true
+      this.articles = await this.newsapi.v2
+        .topHeadlines({
+          country: 'br',
+          category: this.navItemSelected,
+          sortBy: 'relevancy'
+        })
+        .then(({ articles }) => {
+          return articles
+        })
+        .catch(e => {
+          console.log(e)
+        })
+      this.loading = false
     }
   }
 }
