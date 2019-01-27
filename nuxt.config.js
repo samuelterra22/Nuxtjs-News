@@ -20,7 +20,8 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900'
+        href:
+          'https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900'
       },
       {
         rel: 'stylesheet',
@@ -32,7 +33,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#22292f' },
 
   /*
    ** Router config
@@ -44,7 +45,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/tailwind.css'],
+  css: [{ src: '~assets/sass/app.scss', lang: 'sass' }],
 
   /*
   ** Plugins to load before mounting the App
