@@ -2,18 +2,17 @@
   <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
     <div class="overflow-hidden bg-white rounded-lg shadow hover:shadow-raised hover:translateY-2px transition">
       <img
-        class="w-full"
-        src="https://stitches-cdn.hyperyolo.com/demo-bg.png"
+        class="w-full h-64"
+        :src="article.urlToImage"
         alt="Sunset in the mountains"
       >
       <div class="p-6 flex flex-col justify-between ">
-        <h3 class="font-medium text-grey-darkest mb-4 leading-normal">
-          Desktop Publishing Software like Aldus
-          PageMaker
+        <h3 class="font-medium text-grey-darkest mb-4 leading-normal" :title="article.title ">
+          {{ article.title | truncate(44) }}
         </h3>
         <p class="inline-flex items-center">
           <span class="text-grey-dark text-sm">
-            Read More
+            Leia Mais
           </span>
         </p>
       </div>
@@ -23,7 +22,13 @@
 
 <script>
 export default {
-  name: 'Card'
+  name: 'Card',
+  props: {
+    article: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
