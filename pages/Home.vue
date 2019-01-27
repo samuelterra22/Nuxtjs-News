@@ -20,6 +20,13 @@
     </v-content>
 
     <newsletter />
+
+    <input
+      v-scroll-to="{ element: '#the-top' }"
+      type="button"
+      value="To top"
+      class="fixed outline-none pin-b pin-r bg-black text-white hover:text-grey cursor-pointer rounded-full px-2 py-5 m-5"
+    >
   </main>
 </template>
 

@@ -50,7 +50,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~plugins/filters'],
+  plugins: [
+    '~plugins/filters',
+    '~plugins/vue-scroll-to.js'
+    // { src: '~plugins/vue-scroll-to.js', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
