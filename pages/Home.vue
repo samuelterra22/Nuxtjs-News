@@ -20,13 +20,10 @@
 
 <script>
 import Tab from '../components/Tab'
-import Notification from '../components/Notification'
 import Card from '../components/Card'
 import VContent from '../components/VContent'
-import Login from '../components/Login'
-import VArticle from '../components/VArticle'
 import Newsletter from '../components/Newsletter'
-import HorizontalCard from '../components/HorizontalCard'
+import NewsAPI from 'newsapi'
 
 export default {
   components: {
@@ -66,7 +63,6 @@ export default {
     ]
   }),
   async asyncData() {
-    const NewsAPI = require('newsapi')
     const newsapi = new NewsAPI(process.env.API_KEY)
 
     const articles = await newsapi.v2
