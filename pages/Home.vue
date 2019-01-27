@@ -1,6 +1,10 @@
 <template>
   <main>
-    <tab />
+    <tab
+      :items="navItems"
+      :selected="navItemSelected"
+      @selected="onTabSelected"
+    />
 
     <v-content>
       <card
@@ -31,8 +35,37 @@ export default {
     Card,
     Tab
   },
-  data: () => ({ articles: [] }),
-  async asyncData({ app }) {
+  data: () => ({
+    articles: [],
+    navItemSelected: 'business',
+    navItems: [
+      {
+        key: 'business',
+        value: 'Negócios'
+      },
+      {
+        key: 'entertainment',
+        value: 'Entreterimento'
+      },
+      {
+        key: 'health',
+        value: 'Saúde'
+      },
+      {
+        key: 'science',
+        value: 'Ciência'
+      },
+      {
+        key: 'sports',
+        value: 'Esporte'
+      },
+      {
+        key: 'technology',
+        value: 'Tecnologia'
+      }
+    ]
+  }),
+  async asyncData() {
     const NewsAPI = require('newsapi')
     const newsapi = new NewsAPI(process.env.API_KEY)
 
@@ -49,6 +82,11 @@ export default {
         console.log(e)
       })
     return { articles }
+  },
+  methods: {
+    onTabSelected(item) {
+      this.navItemSelected = item.key
+    }
   }
 }
 </script>
