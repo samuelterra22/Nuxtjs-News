@@ -2,23 +2,13 @@
   <main>
     <tab />
 
-    <notification />
-
     <v-content>
       <card
-        v-for="card in [1,2,3]"
-        :key="card"
-      />
-
-      <horizontal-card
-        v-for="card in [1,2,3]"
-        :key="card"
+        v-for="article in articles"
+        :key="article.title"
+        :article="article"
       />
     </v-content>
-
-    <login />
-
-    <v-article />
 
     <newsletter />
   </main>
@@ -36,14 +26,29 @@ import HorizontalCard from '../components/HorizontalCard'
 
 export default {
   components: {
-    HorizontalCard,
     Newsletter,
-    VArticle,
-    Login,
     VContent,
     Card,
-    Notification,
     Tab
+  },
+  data: () => ({ articles: [] }),
+  async asyncData({ app }) {
+    const NewsAPI = require('newsapi')
+    const newsapi = new NewsAPI(process.env.API_KEY)
+
+    const articles = await newsapi.v2
+      .topHeadlines({
+        country: 'br',
+        category: 'technology',
+        sortBy: 'relevancy'
+      })
+      .then(({ articles }) => {
+        return articles
+      })
+      .catch(e => {
+        console.log(e)
+      })
+    return { articles }
   }
 }
 </script>
