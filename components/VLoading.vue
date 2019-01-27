@@ -1,9 +1,11 @@
 <template>
-  <div class="w-full h-full">
+  <div>
     <template v-if="isLoading">
-      <div class="w-full h-full flex items-center text-center flex-wrap text-white">
-        <div class="lds-facebook m-auto">
-          <div /><div /><div />
+      <div class="w-full h-full">
+        <div class="w-full h-full flex items-center text-center flex-wrap text-white">
+          <div class="lds-facebook m-auto">
+            <div /><div /><div />
+          </div>
         </div>
       </div>
     </template>
