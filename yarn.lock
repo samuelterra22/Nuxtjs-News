@@ -1285,10 +1285,12 @@
     "@nuxtjs/meta" "^2.6.0"
     "@nuxtjs/workbox" "^2.6.0"
 
-"@nuxtjs/router@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.1.0.tgz#d79c5f7ed1781465d30b8967779eaca2df18cb3b"
-  integrity sha512-3tFt8AbHXVMB0TRLBuZoXjS2CGgxszE0nejN9+5NSjcKBkNI+MCxiuAyM8JOeWzLZPG7r4Xlf5HnUsBKL3wK5Q==
+"@nuxtjs/router@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.2.0.tgz#2d0a1f6ff59b0a2df6a7257258b4813b66f2489d"
+  integrity sha512-OR2a9JrTiqIQbn2rrn85kTHE2FgXpmDlQtN+gqAGsRhPmUPrVS1hloRWdOVCqXWKQslHqubifrFhsaTeViVyhA==
+  dependencies:
+    consola "^2.4.0"
 
 "@nuxtjs/workbox@^2.6.0":
   version "2.6.0"
@@ -2631,27 +2633,16 @@ consola@^1.4.4:
     lodash "^4.17.5"
     std-env "^1.1.0"
 
-consola@^2.0.0-1, consola@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.3.0.tgz#256b80a927234351d512a4e5693eac9cf8a572b9"
-  integrity sha512-gsawoQfj4DtnwsaPrabFpFOZBxWpzpT+E9fu6YAdFKO3NvBOOsFcQl/cskDOoIDDLMkLZvm4jjMWvSEelIumIw==
+consola@^2.0.0-1, consola@^2.3.0, consola@^2.3.2, consola@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.4.0.tgz#d13c711cd0648a600ca68b399b739cf8f5058097"
+  integrity sha512-fy9j1unXm/bXgk6dPMnwktTJqkAPgm/s28k+wZ/O7XeVgGXDPRXu/hcE12I68iqjk63W6No1J6TQlHQQOMIVhA==
   dependencies:
-    chalk "^2.4.1"
-    dayjs "^1.7.7"
+    chalk "^2.4.2"
+    dayjs "^1.8.3"
     figures "^2.0.0"
     std-env "^2.2.1"
-    string-width "^2.1.1"
-
-consola@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.3.2.tgz#ec75dd9847fa963dc41e21bc2737ac8c962677bb"
-  integrity sha512-7SAo6nBdWJw7XQFu0ZRnXbGBu+RhEp0/fEpm7lTnqRT6bHM0MwEkW0Yxv8phCP9s18qyMqBmVU/pJ2bri/TZIg==
-  dependencies:
-    chalk "^2.4.1"
-    dayjs "^1.7.7"
-    figures "^2.0.0"
-    std-env "^2.2.1"
-    string-width "^2.1.1"
+    string-width "^3.0.0"
 
 console-browserify@^1.1.0:
   version "1.1.0"
@@ -3133,10 +3124,10 @@ date-now@^0.1.4:
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
-dayjs@^1.7.7:
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.7.7.tgz#8df20f78ac2476e3f5348ef49f8f22ebc3016370"
-  integrity sha512-Qlkiu0NNDpYwhk0syK4ImvAl/5YnsEMkvC2O123INviGeOA3Q8s5VyVkZzmN5SC7Wv9bb1+rfwO+uSqtHB4UWw==
+dayjs@^1.8.3:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.4.tgz#e5a8fe080a7955e210045e6c26c5d1d4c88cf602"
+  integrity sha512-Gd2W9A8f40Dwr17/O1W12cC61PSq8aUGKBWRVMs7n4XQNwPPIM9m7YzZPHMlW465Sia6t5KlKK52rYd5oT2T6A==
 
 de-indent@^1.0.2:
   version "1.0.2"
