@@ -1285,10 +1285,10 @@
     "@nuxtjs/meta" "^2.6.0"
     "@nuxtjs/workbox" "^2.6.0"
 
-"@nuxtjs/router@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.2.0.tgz#2d0a1f6ff59b0a2df6a7257258b4813b66f2489d"
-  integrity sha512-OR2a9JrTiqIQbn2rrn85kTHE2FgXpmDlQtN+gqAGsRhPmUPrVS1hloRWdOVCqXWKQslHqubifrFhsaTeViVyhA==
+"@nuxtjs/router@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.2.1.tgz#830bcd7ca9e9909839da252e15af47d142e9619b"
+  integrity sha512-6mZDwZLnHuUtEHSkUih/JskbjBuZ5QzuGVcizWX17U6YELB1PE99zgWsENOD8Z+6xf9bgMlpMJj/QR50FRy8Ig==
   dependencies:
     consola "^2.4.0"
 
