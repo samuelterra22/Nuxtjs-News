@@ -36,7 +36,7 @@
     "nodemon": "^1.19.0",
     "prettier": "1.17.1",
     "sass-loader": "^7.1.0",
-    "tailwindcss": "^0.7.4"
+    "tailwindcss": "^1.0.1"
   },
   "engines": {
     "node": ">=8.0.0",
