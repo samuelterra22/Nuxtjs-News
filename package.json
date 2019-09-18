@@ -22,7 +22,7 @@
     "moment": "^2.24.0",
     "newsapi": "^2.4.0",
     "nuxt": "^2.8.1",
-    "vue-scrollto": "^2.15.0"
+    "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
